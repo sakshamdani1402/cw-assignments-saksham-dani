@@ -27,10 +27,9 @@ form.addEventListener('submit', function (e) {
 
 function showErr(item) {
     let id;
-    console.log(item.id);
+
     if (item.id == "password") {
         id = item.parentElement.nextElementSibling.id;
-        console.log(id);
     }
     else id = item.nextElementSibling.id;
     document.getElementById(id).classList.remove('hidden');
@@ -40,10 +39,9 @@ function showErr(item) {
 
 function showValid(item) {
     let id;
-    console.log(item.id);
+
     if (item.id == "password") {
         id = item.parentElement.nextElementSibling.id;
-        console.log(id);
     }
     else id = item.nextElementSibling.id;
     document.getElementById(id).classList.add('hidden');
@@ -63,10 +61,8 @@ function valid() {
     } else showValid(email); 
 
     const pwd = password.value;
-    if (pwd.match(/[a-z]/g) && pwd.match(
-        /[A-Z]/g) && pwd.match(
-            /[0-9]/g) && pwd.match(
-                /[^a-zA-Z\d]/g) && pwd.length >= 8) showValid(password);
+    if (pwd.match(/[a-z]/g) && pwd.match(/[A-Z]/g) && 
+        pwd.match(/[0-9]/g) && pwd.match(/[^a-zA-Z\d]/g) && pwd.length >= 8) showValid(password);
     else {showErr(password);  flag=false;}
 
     if(pwd === confPassword.value) showValid(confPassword);
