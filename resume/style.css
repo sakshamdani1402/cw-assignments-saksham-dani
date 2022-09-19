@@ -1,0 +1,102 @@
+:root{
+    --grey : rgb(93, 93, 93);
+    --blue : rgb(24, 109, 255);
+    --light-blue : rgba(204, 224, 248, 0.825);
+    --big : 24px;
+    --small : 18px;
+}
+.grey{
+    color: var(--grey);
+}
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+p{
+    margin : 4px;
+}
+.top{
+    display: flex;
+    padding: 40px 40px 10px 40px;
+}
+.col-1{
+    width: 70%;
+    padding: 20px;
+}
+.col-2{
+    width: 30%;
+    padding: 20px;
+    text-align: center;
+}
+.name{
+    font-size: 70px;
+    font-weight: 500;
+}
+.desc{
+    margin: 50px 20px 20px 0;
+    font-size: var(--big);
+    color: var(--grey);
+    width: 95%;
+}
+.resume-img img{
+    width: 160px;
+    height: 160px;
+}
+.info{
+    padding: 20px 20px 0 20px;
+    margin-left: 20%;
+    text-align: left;
+}
+.info p{
+    font-weight: 500;
+}
+.bottom{
+    padding: 0px 40px 0 40px;
+    display: flex;
+}
+.titles{
+    margin-bottom: 5%;
+    text-align: left;
+}
+.titles > h2{
+    color: var(--blue);
+}
+.titles > div{
+    margin: 1% 0;
+}
+.edu > div{
+ margin: 1% 0;
+}
+.edu-name{
+    font-size: var(--small);
+    font-weight: 500;
+}
+.edu-desc{
+    background-color: var(--light-blue);
+    padding: 1%;
+    margin-top: 1%;
+    width: 90%;
+    border-radius: 5px;
+}
+.item-name{
+    font-size: var(--small);
+    font-weight: 500;
+}
+.skill-list{
+    font-size: var(--small);
+}
+.titles > p {
+    font-size: var(--small);
+}
+
+.col-2 .titles{
+    margin-bottom: 12%;
+}
+
+@media only screen and (max-width: 600px) {
+    .top,.bottom{
+        flex-wrap: wrap-reverse;
+    }
+    .col-1, .col-2{
+        width: 90%;
+    }
+}
