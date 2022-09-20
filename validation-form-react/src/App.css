@@ -1,0 +1,148 @@
+:root {
+  --grey: rgb(164, 164, 164);
+  --green: rgb(75, 212, 81);
+  --red: rgba(248, 11, 11, 0.847);
+  --blue: rgb(58, 92, 240);
+  --field-height : 30px;
+}
+.App{
+  height:100vh;
+  width:100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Tahoma, Geneva, Verdana, sans-serif;
+}
+.form{
+  width: 40%;
+  padding: 2%;
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+    box-shadow: 23px 23px 46px #cfcfcf,
+        -23px -23px 46px #ffffff;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 10px;
+}
+
+.input{
+  width: 85%;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  margin : 1%;
+}
+.password{
+  width: 85%;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  margin : 1%;
+  position: relative;
+}
+.input label, .password label{
+  color: var(--grey);
+}
+.input input, .password input{
+  width: 100%;
+  outline: none;
+  border: 2px solid var(--grey);
+  border-radius: 5px;
+  height: var(--field-height);
+  transition: border 250ms ease-in;
+}
+.password-field{
+  position: relative;
+}
+.password-field i{
+  position: absolute;
+  top: 25%;
+  right: 5px;
+  cursor: pointer;
+  color: var(--grey);
+}
+
+.invalid{
+  border: 2px solid var(--red) !important;
+}
+.valid{
+  border: 2px solid var(--green) !important;
+}
+
+.submit-btn{
+  background-color: var(--blue);
+  color: white;
+  border: none;
+  padding: 3%;
+  width: 86%;
+  margin-top: 5%;
+  margin-left:10px ;
+  border-radius: 5px;
+}
+.hidden{
+  display: none;
+}
+.msg{
+  margin: 2px;
+  color: var(--red);
+  font-size: 12px;
+}
+.modal{
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(29, 29, 29, 0.352);
+}
+
+.modal-body{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 20%;
+  width: 30%;
+  padding: 1% 2%;
+  background-color: white;
+  border: 2px solid var(--green);
+  border-radius: 10px;
+}
+.modal-body h4{
+  color: var(--green) ;
+}
+.modal-body i{
+  color: var(--grey);
+  transition: 150ms ease-in color;
+  font-size: larger;
+}
+.modal-body i:hover{
+  color: var(--red);
+}
+.invisible{
+  visibility: hidden;
+}
+
+
+@media only screen and (max-width: 600px) {
+  .form{
+      width: 80%;
+  }
+  .modal-body{
+      width : 80%;
+      padding-right:10px;
+  }
+
+}
+
+@media only screen and (max-width: 1000px) 
+and (min-width: 600px) {
+  .form{
+       width: 70%;
+  }
+  .modal-body{
+      width : 50%
+  }
+}
