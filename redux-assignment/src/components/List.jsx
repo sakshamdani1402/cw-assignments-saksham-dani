@@ -29,7 +29,7 @@ const List = () => {
       }, 1000);
 
     console.log("in eff :" + page);
-  }, [page])
+  }, [page,dispatch])
 
   useEffect(() => {
     const currentElement = lastElement;
