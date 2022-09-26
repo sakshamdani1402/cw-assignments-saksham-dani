@@ -1,13 +1,10 @@
 import React, { useRef, useEffect, useState } from 'react'
 import ListItems from './ListItems';
 import { fetchData } from '../app/fetchData';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch, connect } from 'react-redux';
 import { setPage, setLoading } from '../app/actions'
-const List = () => {
+const List = ({items, loading, page}) => {
   const dispatch = useDispatch();
-  const items = useSelector(state => state.items);
-  const loading = useSelector(state => state.loading);
-  const page = useSelector(state => state.page);
   const [lastElement, setLastElement] = useState(null);
 
 
@@ -27,8 +24,6 @@ const List = () => {
       setTimeout(() => {
         dispatch(fetchData(page));
       }, 1000);
-
-    console.log("in eff :" + page);
   }, [page,dispatch])
 
   useEffect(() => {
@@ -50,18 +45,24 @@ const List = () => {
 
     <div id="container" className='container'>
       <h1>Redux Assignment</h1>
-      {items.length > 0 && items.map((listItem, i) => {
-        return i === items.length - 1 && !loading && page <= 2 ? (
-          <div key={listItem.id} ref={setLastElement} className="container">
-            <ListItems key={listItem.id} item={listItem} />
-          </div>
-        )
-          : <ListItems key={listItem.id} item={listItem} />
+      {
+        items.length > 0 && items.map((listItem, i) => {
+          return i === items.length - 1 && !loading && page <= 2 ? 
+          (
+            <div key={listItem.id} ref={setLastElement} className="container">
+              <ListItems key={listItem.id} item={listItem} />
+            </div>
+          )
+            : <ListItems key={listItem.id} item={listItem} />
       })
       }
       {loading && <h1> Loading ... </h1>}
     </div>
   )
 }
-
-export default List
+const mapStateToProps = (state) => ({
+  items: state.items,
+  loading : state.loading,
+  page : state.page
+});
+export default connect(mapStateToProps)(List);

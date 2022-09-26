@@ -13,15 +13,7 @@ function itemReducer(state = initState, action){
         case "FETCH_ITEMS_SUCCESS":
             return{
                 ...state, items : [...state.items, ...action.payload.data],
-                // page : state.page + 1,
-                // loading : state.page <2 ? false : true
             }
-        // case "FETCH_MORE_ITEMS" : 
-        //     return {
-        //         ...state, 
-        //         items : [...state.items, ...action.payload.data],
-        //         loaded : true
-        //     }
         case "FETCH_ITEMS_FAIL":
             return {
                 ...state, err : action.payload.err
