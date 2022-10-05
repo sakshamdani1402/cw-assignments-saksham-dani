@@ -1,4 +1,4 @@
-import React,{useState} from 'react'
+import React from 'react'
 import { Row} from 'reactstrap'
 const Footer = ({pageInit,total,setPage}) => {
   
@@ -12,9 +12,9 @@ const Footer = ({pageInit,total,setPage}) => {
   }
   return (
     <Row className='d-flex justify-content-between m-4'>
-        <button className={`footer-btn`} onClick={handleDecrement}>prev</button>
+        <button className={`footer-btn`} onClick={handleDecrement}><i class="fa-solid fa-caret-left"></i> page</button>
         <p className='page-no'>{page}/{total}</p>
-        <button className='footer-btn' onClick={handleIncrement}>next</button>
+        <button className='footer-btn' onClick={handleIncrement}>page <i class="fa-solid fa-caret-right"></i></button>
     </Row>
   )
 }

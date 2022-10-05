@@ -29,17 +29,23 @@ const Filter = ({ setNewPrice, setCategory, setBrand, setPage }) => {
   function applyFilters() {
     var newBrands = "", newCategories = "", newPrice = "";
 
-    checkBrand.map((item, i) => {
-      if (item === true) newBrands += `${brands[i]}|`;
-    })
+    for(var i=0; i<checkBrand.length; i++){
+      if(checkBrand[i]===true) newBrands += `${brands[i]}|`;
+    }
+    // checkBrand.map((item, i) => {
+    //   if (item === true) newBrands += `${brands[i]}|`;
+    // })
     newBrands = newBrands.substring(0, newBrands.length - 1);
 
-    checkCategory.map((item, i) => {
-      if (item === true) newCategories += `${categories[i]}|`;
-    })
+    for(var j=0; j<checkCategory.length; j++){
+      if(checkCategory[j]===true) newCategories += `${categories[j]}|`;
+    }
+    // checkCategory.map((item, i) => {
+    //   if (item === true) newCategories += `${categories[i]}|`;
+    // })
     newCategories = newCategories.substring(0, newCategories.length - 1);
 
-    newPrice = `${price.above == '' ? '0' : price.above}|${price.below == '' ? '1800' : price.below}`;
+    newPrice = `${price.above === '' ? '0' : price.above}|${price.below === '' ? '1800' : price.below}`;
     setBrand(newBrands); setCategory(newCategories); setNewPrice(newPrice);
     setPage(1);
 
@@ -48,7 +54,7 @@ const Filter = ({ setNewPrice, setCategory, setBrand, setPage }) => {
   return (
     <>
       <button type="button " className="btn filter-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
-        Filter
+        Filter <i class="fa-solid fa-filter"></i>
       </button>
 
       <div className="modal" id="exampleModal" tabIndex="-1">
@@ -79,10 +85,10 @@ const Filter = ({ setNewPrice, setCategory, setBrand, setPage }) => {
                 </div>
                 <div className="col-md-4 col-12">
                   <h5 className='m-2'>Price</h5>
-                  <div className='mt-2'>
+                  <div className='mt-4'>
                     <p>Above</p>
                     <input type="number" className='w-75' name='above' onChange={onChangePrice} value={price.above} />
-                    <p>Below</p>
+                    <p className='mt-2'>Below</p>
                     <input type="number" className='w-75' name='below' onChange={onChangePrice} value={price.below} />
                   </div>
                 </div>

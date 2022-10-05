@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\saksham\\Documents\\dotnet\\mvc\\server\\server.csproj": {}
+    "C:\\Users\\saksham\\Documents\\cw-assignments-saksham-dani\\mvc\\server\\server.csproj": {}
   },
   "projects": {
-    "C:\\Users\\saksham\\Documents\\dotnet\\mvc\\server\\server.csproj": {
+    "C:\\Users\\saksham\\Documents\\cw-assignments-saksham-dani\\mvc\\server\\server.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\saksham\\Documents\\dotnet\\mvc\\server\\server.csproj",
+        "projectUniqueName": "C:\\Users\\saksham\\Documents\\cw-assignments-saksham-dani\\mvc\\server\\server.csproj",
         "projectName": "server",
-        "projectPath": "C:\\Users\\saksham\\Documents\\dotnet\\mvc\\server\\server.csproj",
+        "projectPath": "C:\\Users\\saksham\\Documents\\cw-assignments-saksham-dani\\mvc\\server\\server.csproj",
         "packagesPath": "C:\\Users\\saksham\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\saksham\\Documents\\dotnet\\mvc\\server\\obj\\",
+        "outputPath": "C:\\Users\\saksham\\Documents\\cw-assignments-saksham-dani\\mvc\\server\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\saksham\\AppData\\Roaming\\NuGet\\NuGet.Config"

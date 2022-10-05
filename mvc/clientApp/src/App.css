@@ -6,7 +6,8 @@
 
 .footer-btn{
   width: 10%;
-  background-color: lightblue;
+  background-color: black;
+  color: white;
   border: none;
   border-radius: 5px;
   padding: 10px;
@@ -22,7 +23,8 @@
 }
 .filter-btn{
   width: 200px;
-  background-color: lightblue;
+  background-color: black;
+  color: white;
   border: none;
   border-radius: 5px;
   padding: 10px;
@@ -39,11 +41,24 @@
   border: none;
   border-radius: 5px;
   position: absolute;
-  top: 5px;
 }
 .img-btn.prev{
   left: 5px;
 }
 .img-btn.next{
   right: 5px;
+}
+.brand-badge{
+  position: absolute;
+  color: white;
+  background-color: black;
+  right:0;
+}
+.card-body{
+  position: relative;
+}
+
+.filter-check{
+  font-size: medium;
+  font-family: Tahoma, Geneva, Verdana, sans-serif;
 }
